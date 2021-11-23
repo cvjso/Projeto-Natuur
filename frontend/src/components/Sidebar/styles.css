@@ -1,0 +1,37 @@
+.sidebar-component {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  padding-left: 1%;
+  width: 200px;
+  height: 100%;
+  background: #223b38;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+}
+
+.sidebar-title {
+  margin: 0 5px;
+  font-family: "Carneys Gallery Demo Version";
+  font-size: 28px;
+  margin-right: auto;
+}
+
+.sidebar-items {
+  margin-top: 15%;
+}
+
+.sidebar-element {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin: 15% 0%;
+}
+
+.sidebar-element img {
+  width: 26px;
+  height: 27px;
+  padding: 2% 2%;
+}
