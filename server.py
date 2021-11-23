@@ -2,21 +2,16 @@ from aiohttp import web
 
 # request handlers imports
 
-from features.handle.handlers import handle, saida, preco, produto, chegada, cartao, especie, quantidade, compra, periodo
+from features.handle.handlers import handle, graf1, graf2, graf3, graf4
 
 
 def create_app():
     app = web.Application()
     app.router.add_get('/', handle)
-    app.router.add_get('/saida', saida)
-    app.router.add_get('/preco', preco)
-    app.router.add_get('/produto', produto)
-    app.router.add_get('/chegada', chegada)
-    app.router.add_get('/cartao', cartao)
-    app.router.add_get('/especie', especie)
-    app.router.add_get('/quantidade', quantidade)
-    app.router.add_get('/compra', compra)
-    app.router.add_get('/periodo', periodo)
+    app.router.add_get('/graf1', graf1)
+    app.router.add_get('/graf2', graf2)
+    app.router.add_get('/graf3', graf3)
+    app.router.add_get('/graf4', graf4)
     return app
 
 
