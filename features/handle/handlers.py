@@ -2,46 +2,36 @@ from aiohttp import web
 import json
 import pandas as pd
 
+from features.handle.mergeDict.mergeDict import mergeDict
+
 data = pd.read_csv('data/result.csv')
 
 DICT = data.to_dict()    
+
+dict1 = DICT['Produto']
+
+dict2 = mergeDict(DICT['Cartão'], DICT['Espécie'])
+
+dict3 = mergeDict(DICT['Produto'], DICT['Compra'])
+
+dict4 = mergeDict(DICT['Produto'], DICT['Periodo'])
 
 async def handle(request):
     response_obj = { 'status' : 'success'}
     return web.Response(text=json.dumps(response_obj))
 
-async def saida(request):
-    response_obj = DICT['Hora de saida']
+async def graf1(request):
+    response_obj = dict1
     return web.Response(text=json.dumps(response_obj))
 
-async def preco(request):
-    response_obj = DICT['Preço']
+async def graf2(request):
+    response_obj = dict2
     return web.Response(text=json.dumps(response_obj))
 
-async def produto(request):
-    response_obj = DICT['Produto']
+async def graf3(request):
+    response_obj = dict3
     return web.Response(text=json.dumps(response_obj))
 
-async def chegada(request):
-    response_obj = DICT['Hora de chegada']
-    return web.Response(text=json.dumps(response_obj))
-
-async def cartao(request):
-    response_obj = DICT['Cartão']
-    return web.Response(text=json.dumps(response_obj))
-
-async def especie(request):
-    response_obj = DICT['Espécie']
-    return web.Response(text=json.dumps(response_obj))
-
-async def quantidade(request):
-    response_obj = DICT['Quantidade']
-    return web.Response(text=json.dumps(response_obj))
-
-async def compra(request):
-    response_obj = DICT['Compra']
-    return web.Response(text=json.dumps(response_obj))
-
-async def periodo(request):
-    response_obj = DICT['Periodo']
+async def graf4(request):
+    response_obj = dict4
     return web.Response(text=json.dumps(response_obj))
