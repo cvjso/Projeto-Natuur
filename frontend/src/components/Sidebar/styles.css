@@ -1,12 +1,12 @@
 .sidebar-component {
   display: flex;
   flex-direction: column;
-  padding: 2%;
-  padding-left: 1%;
+  padding: 20px;
+  padding-left: 15px;
   width: 200px;
   height: 100%;
   background: #223b38;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   color: #fff;
@@ -28,6 +28,11 @@
   display: flex;
   align-items: center;
   margin: 15% 0%;
+}
+
+.sidebar-element:hover {
+  background: #1a2f2c;
+  border-radius: 4px;
 }
 
 .sidebar-element img {

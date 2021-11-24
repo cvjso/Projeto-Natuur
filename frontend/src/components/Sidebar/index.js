@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles.css";
 import note from "./icons/Icon.png";
 import start from "./icons/Icon-1.png";
@@ -11,25 +12,25 @@ export default class Sidebar extends React.Component {
       <div className="sidebar-component">
         <h3 className="sidebar-title">Natuur</h3>
         <div className="sidebar-items">
-          <div className="sidebar-element">
+          <Link to="/nota" className="sidebar-element">
             <img src={note} alt="note icon" />
             <text>Nova nota</text>
-          </div>
+          </Link>
 
-          <div className="sidebar-element">
+          <Link to="/" className="sidebar-element">
             <img src={start} alt="start icon" />
             <text>Início</text>
-          </div>
+          </Link>
 
-          <div className="sidebar-element">
+          <Link to="/actividade" className="sidebar-element">
             <img src={ativity} alt="Ativity icon" />
             <text>Atividade</text>
-          </div>
+          </Link>
 
-          <div className="sidebar-element">
+          <Link to="/analise" className="sidebar-element">
             <img src={analysis} alt="Analysis icon" />
             <text>Análises</text>
-          </div>
+          </Link>
         </div>
       </div>
     );

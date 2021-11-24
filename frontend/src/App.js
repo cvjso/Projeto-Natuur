@@ -8,9 +8,11 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Sidebar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <div className="App-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   );
